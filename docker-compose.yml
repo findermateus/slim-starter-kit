@@ -2,7 +2,7 @@ services:
   php:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: docker/php/Dockerfile
     ports:
       - "80:80"
     volumes:
