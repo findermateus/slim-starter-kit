@@ -12,3 +12,5 @@ $app->get('/', function (RequestInterface $request, ResponseInterface $response,
 $app->get('/test-pdo', ExampleController::class . ':testPdo');
 
 $app->get('/example-data', ExampleController::class . ':getExampleData');
+
+$app->get('/exception-example', ExampleController::class . ':exceptionExample');

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Examples\ExampleRepository;
+use App\Infra\ApplicationException;
 use PDO;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -18,5 +19,10 @@ class ExampleController
         $response->getBody()->write(json_encode($data));
 
         return $response->withHeader('Content-Type', 'application/json');
+    }
+
+    public function exceptionExample()
+    {
+        throw new ApplicationException("Example error occurred", 400, "EXAMPLE_ERROR");
     }
 }

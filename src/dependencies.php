@@ -16,4 +16,4 @@ $containerBuilder->addDefinitions([
     },
 ]);
 
-return $containerBuilder;
+return $containerBuilder->build();
